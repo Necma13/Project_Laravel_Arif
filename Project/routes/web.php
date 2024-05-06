@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\JurusanController;
 
 /*
@@ -23,4 +24,8 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //data jurusan
-Route::get('/jurusan/', [JurusanController::class, 'index']);
+Route::get('/jurusan/', [JurusanController::class, 'index'])->middleware('auth');
+Route::get('/jurusan/form/', [JurusanController::class, 'create'])->middleware('auth');
+Route::post('/jurusan/store/', [JurusanController::class, 'store'])->middleware('auth');
+Route::get('/jurusan/edit/{id}', [JurusanController::class, 'edit'])->middleware('auth');
+Route::put('/jurusan/{id}', [JurusanController::class, 'update'])->middleware('auth');

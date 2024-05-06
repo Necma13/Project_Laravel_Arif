@@ -225,7 +225,7 @@
           </li>
           <li class="nav-item">
             <a href="/mahasiswa/" class="nav-link">
-            <i class="fa-solid fa-user-large"></i>
+            <i class="fa fa-user-graduate"></i>
               <p>
                 Mahasiswa
                 <span class="right badge badge-danger">New</span>
@@ -234,7 +234,7 @@
           </li>
           <li class="nav-item">
             <a href="/jurusan/" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <i class="fa fa-graduation-cap"></i>
               <p>
                 Jurusan
                 <span class="right badge badge-danger">New</span>
