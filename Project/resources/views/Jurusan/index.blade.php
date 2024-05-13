@@ -51,7 +51,31 @@
                 <td>{{$item->jurusan}}</td>
                 <td>
                     <a href="/jurusan/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen"></i></a>
-                    <a href="" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="hapus{{$item->id}}" tabindex="-1" aria-labelledby="hapus{{$item->id}}" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="hapus{{$item->id}}">Peringatan</h1>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Apakah anda yakin ingin menghapus jurusan <b>{{$item->jurusan}}</b>?
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <form action="/jurusan/{{$item->id}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Hapus</button>
+                            </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </td>
               </tr>
             @empty
