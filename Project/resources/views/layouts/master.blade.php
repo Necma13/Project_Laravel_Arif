@@ -224,7 +224,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="/mahasiswa/" class="nav-link">
+            <a href="/Mahasiswa/" class="nav-link">
             <i class="fa fa-user-graduate"></i>
               <p>
                 Mahasiswa
