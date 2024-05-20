@@ -52,7 +52,7 @@
                 <td>{{$item->nama}}</td>
                 <td>{{$item->jurusans_id}}</td>
                 <td>
-                    <a href="#">Detail</a>
+                    <a href="/Mahasiswa/detail/{{$item->id}}"><i class="fa fa-eye"></i></a>
                     <a href="/Mahasiswa/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen"></i></a>
                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                         <i class="fa fa-trash"></i>

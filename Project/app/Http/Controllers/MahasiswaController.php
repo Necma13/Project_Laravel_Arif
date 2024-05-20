@@ -60,9 +60,10 @@ class MahasiswaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function detail($id)
     {
-        //
+        $mhs = Mahasiswa::findOrFail($id);
+        return view('Mahasiswa.detail', compact('mhs'));
     }
 
     /**
@@ -72,7 +73,7 @@ class MahasiswaController extends Controller
     {
         $mhs = Mahasiswa::findOrFail($id);
         $jur = Jurusan::all();
-        return view('mahasiswa.edit', compact('mhs', 'jur'));
+        return view('Mahasiswa.edit', compact('mhs', 'jur'));
     }
 
     /**
