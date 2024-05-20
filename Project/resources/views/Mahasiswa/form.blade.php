@@ -47,8 +47,8 @@
                     <input type="text" class="form-control" name="alamat">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Pilih Jenis Kelamin</label>
-                    <select class="form-select" name="jk">
+                    <label class="form-label">-Pilih Jenis Kelamin-</label>
+                    <select type="radio" class="form-select" name="jk">
                         <option value="laki-laki">Laki-Laki</option>
                         <option value="perempuan">Perempuan</option>
                         <option value="lainnya">Lainnya</option>

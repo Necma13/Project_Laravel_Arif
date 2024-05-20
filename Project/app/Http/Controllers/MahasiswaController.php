@@ -70,7 +70,9 @@ class MahasiswaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $mhs = Mahasiswa::findOrFail($id);
+        $jur = Jurusan::all();
+        return view('mahasiswa.edit', compact('mhs', 'jur'));
     }
 
     /**
@@ -78,7 +80,19 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $mhs = Mahasiswa::findOrFail($id);
+
+        $mhs->nama = $request->input('nama');
+        $mhs->tempat = $request->input('tempat');
+        $mhs->tanggal = $request->input('tanggal');
+        $mhs->alamat = $request->input('alamat');
+        $mhs->jk = $request->input('jk');
+        $mhs->jurusans_id = $request->input('jurusans_id');
+        $mhs->agama = $request->input('agama');
+
+        $mhs->save();
+
+        return redirect('/Mahasiswa/')->with('success', 'Data Mahasiswa berhasil diupdate');
     }
 
     /**
