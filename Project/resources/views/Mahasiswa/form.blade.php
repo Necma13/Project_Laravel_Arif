@@ -48,12 +48,26 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">-Pilih Jenis Kelamin-</label>
-                    <select type="radio" class="form-select" name="jk">
-                        <option value="laki-laki">Laki-Laki</option>
-                        <option value="perempuan">Perempuan</option>
-                        <option value="lainnya">Lainnya</option>
-                    </select>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jk" id="laki-laki" value="laki-laki">
+                        <label class="form-check-label" for="laki-laki">
+                            Laki-Laki
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jk" id="perempuan" value="perempuan">
+                        <label class="form-check-label" for="perempuan">
+                            Perempuan
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="jk" id="lainnya" value="lainnya">
+                        <label class="form-check-label" for="lainnya">
+                            Lainnya
+                        </label>
+                    </div>
                 </div>
+
                 <div class="mb-3">
                     <label class="form-label">-Pilih Jurusan-</label>
                     <select name="jurusans_id" class="form-control" id="">
@@ -64,8 +78,9 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Pilih Agama</label>
-                    <select class="form-select" name="agama">
+                    <label class="form-label">-Pilih Agama-</label>
+                    <select name="agama" class="form-control" id="">
+                        <option value="">-Pilih Agama-</option>
                         <option value="Islam">Islam</option>
                         <option value="Kristen">Kristen</option>
                         <option value="Katolik">Katolik</option>

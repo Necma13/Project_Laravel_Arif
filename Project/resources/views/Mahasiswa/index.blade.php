@@ -50,7 +50,7 @@
                 <td>{{$nomor++}}</td>
                 <td>{{$item->nim}}</td>
                 <td>{{$item->nama}}</td>
-                <td>{{$item->jurusans_id}}</td>
+                <td>{{$item->jurusans->kode}}-{{$item->jurusans->jurusan}}</td>
                 <td>
                     <a href="/Mahasiswa/detail/{{$item->id}}"><i class="fa fa-eye"></i></a>
                     <a href="/Mahasiswa/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen"></i></a>

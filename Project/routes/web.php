@@ -39,3 +39,4 @@ Route::post('/Mahasiswa/store/', [MahasiswaController::class, 'store'])->middlew
 Route::get('/Mahasiswa/edit/{id}', [MahasiswaController::class, 'edit'])->middleware('auth');
 Route::put('/Mahasiswa/{id}', [MahasiswaController::class, 'update'])->middleware('auth');
 Route::delete('/Mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->middleware('auth');
+Route::get('/Mahasiswa/detail/{id}', [MahasiswaController::class, 'detail'])->middleware('auth');
