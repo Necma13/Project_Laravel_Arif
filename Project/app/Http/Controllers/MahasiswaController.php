@@ -53,7 +53,14 @@ class MahasiswaController extends Controller
     $mhs->jk = $request->jk;
     $mhs->jurusans_id = $request->jurusans_id;
     $mhs->agama = $request->agama;
+    $mhs->foto = $request->foto->getClientOriginalName();
     $mhs->save();
+
+    //untuk tersimpan di public
+    $request->foto->move('foto',$request->foto->getClientOriginalName());
+
+    //untuk tersimpan di storage
+    //$request->foto->storeAs('foto',$request->foto->getClientOriginalName());
 
     return redirect('/Mahasiswa/');
 }
