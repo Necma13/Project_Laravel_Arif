@@ -20,7 +20,7 @@
                 <li>Tanggal Lahir: {{ $mhs->tanggal }}</li>
                 <li>Alamat: {{ $mhs->alamat }}</li>
                 <li>Jenis Kelamin: {{ $mhs->jk }}</li>
-                <li>Jurusan: {{ $mhs->jurusan->jurusan }}</li>
+                <li>Jurusan: {{ $mhs->jurusans->jurusan }}</li>
                 <li>Agama: {{ $mhs->agama }}</li>
             </ul>
             <a href="{{ url('/Mahasiswa/edit/'.$mhs->id) }}" class="btn btn-primary">Edit</a>

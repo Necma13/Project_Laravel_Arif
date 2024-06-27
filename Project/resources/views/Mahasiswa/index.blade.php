@@ -52,7 +52,69 @@
                 <td>{{$item->nama}}</td>
                 <td>{{$item->jurusans->kode}}-{{$item->jurusans->jurusan}}</td>
                 <td>
-                    <a href="/Mahasiswa/detail/{{$item->id}}"><i class="fa fa-eye"></i></a>
+                    <button type="button" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#detail{{$item->id}}">
+                        <i class="fa fa-eye"></i>
+                    </button>
+                        <!-- Modal Detail-->
+                        <div class="modal fade" id="detail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Detail {{$item->nama}}</h1>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table">
+
+                                        <tbody>
+                                                <tr>
+                                                    <td>NIM</td>
+                                                    <th scope="row">{{$item->nim}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nama</td>
+                                                    <th scope="row">{{$item->nama}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tempat Lahir</td>
+                                                    <th scope="row">{{$item->tempat}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tanggal Lahir</td>
+                                                    <th scope="row">{{$item->tanggal}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alamat</td>
+                                                    <th scope="row">{{$item->alamat}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jenis Kelamin</td>
+                                                    <th scope="row">{{$item->jk}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jurusan</td>
+                                                    <th scope="row">{{$item->jurusans->jurusan}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Agama</td>
+                                                    <th scope="row">{{$item->agama}}</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Foto</td>
+                                                    <th scope="row">{{$item->foto}}</th>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+
                     <a href="/Mahasiswa/edit/{{$item->id}}" class="btn btn-info btn-xs"><i class="fa fa-pen"></i></a>
                     <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#hapus{{$item->id}}">
                         <i class="fa fa-trash"></i>
